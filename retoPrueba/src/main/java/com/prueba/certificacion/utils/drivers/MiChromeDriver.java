@@ -10,7 +10,7 @@ public class MiChromeDriver {
 
     public static MiChromeDriver web() {
         System.setProperty("webdriver.chrome.driver",
-                "src/test/resources/drivers/chromedriver_89.exe");
+                "src/test/resources/drivers/chromedriver_90.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--start-maximized");
         driver=new ChromeDriver(chromeOptions);
