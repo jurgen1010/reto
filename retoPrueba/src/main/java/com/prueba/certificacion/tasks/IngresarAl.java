@@ -11,7 +11,7 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class IngresarAl implements Task {
 
-    private String menu;
+    private final String menu;
     public IngresarAl (String menu){
         this.menu=menu;
     }
