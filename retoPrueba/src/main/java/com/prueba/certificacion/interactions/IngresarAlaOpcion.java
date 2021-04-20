@@ -3,7 +3,6 @@ package com.prueba.certificacion.interactions;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
@@ -11,7 +10,6 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.WebElement;
 
 import static com.prueba.certificacion.userinterfaces.ConsultarTarifas.OPCION_EN_ACCESO_RAPIDO;
-import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class IngresarAlaOpcion implements Interaction {
 
@@ -26,14 +24,11 @@ public class IngresarAlaOpcion implements Interaction {
         WebElement opcionTarifario =  OPCION_EN_ACCESO_RAPIDO.of(opcion).resolveFor(actor);
         if(!opcionTarifario.isEnabled()){
             WaitUntil.the(OPCION_EN_ACCESO_RAPIDO.of(opcion), WebElementStateMatchers.isNotPresent()).forNoMoreThan(5).seconds();
-        }else{
-            actor.attemptsTo(Scroll.to(OPCION_EN_ACCESO_RAPIDO.of(opcion)),
-                             Click.on(OPCION_EN_ACCESO_RAPIDO.of(opcion)));
         }
-        //actor.attemptsTo(Scroll.to(OPCION_EN_ACCESO_RAPIDO.of(opcion)));
 
-        //actor.attemptsTo(Click.on(OPCION_EN_ACCESO_RAPIDO.of(opcion)));
+        actor.attemptsTo(Scroll.to(OPCION_EN_ACCESO_RAPIDO.of(opcion)));
 
+        actor.attemptsTo(Click.on(OPCION_EN_ACCESO_RAPIDO.of(opcion)));
     }
 
     public static IngresarAlaOpcion deNombre(String opcion){
