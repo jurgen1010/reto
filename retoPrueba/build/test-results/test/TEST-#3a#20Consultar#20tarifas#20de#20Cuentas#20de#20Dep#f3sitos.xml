@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name=": Consultar tarifas de Cuentas de Depósitos" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-19T17:54:40" hostname="LAPTOP-H41EU6T9" time="49.954">
+<testsuite name=": Consultar tarifas de Cuentas de Depósitos" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-20T01:59:35" hostname="LAPTOP-H41EU6T9" time="18.933">
   <properties/>
-  <testcase name="Consulta exitosa del saldo promedio mensual por debajo del mínimo de una cuenta Corriente" classname=": Consultar tarifas de Cuentas de Depósitos" time="49.954"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}) on port 19871
+  <testcase name="Consulta exitosa del saldo promedio mensual por debajo del mínimo de una cuenta Corriente" classname=": Consultar tarifas de Cuentas de Depósitos" time="18.933"/>
+  <system-out><![CDATA[
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}) on port 42975
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-abr 19, 2021 12:54:42 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+abr 19, 2021 8:59:37 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 [Test worker] INFO net.serenitybdd.core.Serenity - 
         __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  

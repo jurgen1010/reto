@@ -1,5 +1,6 @@
 package com.prueba.certificacion.stepdefinitions;
 
+import com.prueba.certificacion.tasks.BuscarElDocumento;
 import com.prueba.certificacion.tasks.UbicarseEn;
 import com.prueba.certificacion.utils.drivers.MiChromeDriver;
 import cucumber.api.java.Before;
@@ -29,13 +30,13 @@ public class ConsultarTarifasStepDefinition {
 
     @Cuando("^Ingreso al menu tarifario$")
     public void ingresoAlMenuTarifario()  {
-        theActorInTheSpotlight().attemptsTo(UbicarseEn.menu("Accesos rápidos"));
+        theActorInTheSpotlight().attemptsTo(UbicarseEn.accesosRapidos());
     }
 
 
     @Cuando("^Consulto el archivo de tarifas de Cuentas de Depositos$")
     public void consultoElArchivoDeTarifasDeCuentasDeDepositos()  {
-
+        theActorInTheSpotlight().attemptsTo(BuscarElDocumento.tarifasDeCuentasDepositos());
     }
 
     @Entonces("^Visualizo que la tarifa a mi cuenta es la correcta$")
