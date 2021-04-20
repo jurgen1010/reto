@@ -86,9 +86,72 @@
 <h2>Standard output</h2>
 <span class="code">
 <pre>
-1 Scenarios (?[32m1 passed?[0m)
-4 Steps (?[32m4 passed?[0m)
-0m19,554s
+?[31mFailed scenarios:?[0m
+?[31msrc/test/resources/features/tarifario.feature:7 ?[0m# Consulta exitosa del archivo con tarifas para cuentas depositos
+
+1 Scenarios (?[31m1 failed?[0m)
+4 Steps (?[31m1 failed?[0m, ?[36m2 skipped?[0m, ?[32m1 passed?[0m)
+0m10,139s
+
+net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: element click intercepted: Element is not clickable at point (490, 937)
+  (Session info: chrome=90.0.4430.72)
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'LAPTOP-H41EU6T9', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.72, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\jurge\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51606}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3e7f38f88e03edb4cb4710ce6448ebcd
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1041)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget.performAs(ClickOnTarget.java:13)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget$$EnhancerByCGLIB$$e3f2ec6d.CGLIB$performAs$0(&lt;generated&gt;)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget$$EnhancerByCGLIB$$e3f2ec6d$$FastClassByCGLIB$$eb009f51.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:449)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:434)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:409)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:150)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:137)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:68)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget$$EnhancerByCGLIB$$e3f2ec6d.performAs(&lt;generated&gt;)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:106)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:90)
+	at com.prueba.certificacion.interactions.IngresarAlaOpcion.performAs(IngresarAlaOpcion.java:30)
+	at com.prueba.certificacion.interactions.IngresarAlaOpcion$$EnhancerByCGLIB$$930643f5.CGLIB$performAs$0(&lt;generated&gt;)
+	at com.prueba.certificacion.interactions.IngresarAlaOpcion$$EnhancerByCGLIB$$930643f5$$FastClassByCGLIB$$c11e4b21.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:10)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:20)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:361)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:132)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:68)
+	at com.prueba.certificacion.interactions.IngresarAlaOpcion$$EnhancerByCGLIB$$930643f5.performAs(&lt;generated&gt;)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:106)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:90)
+	at com.prueba.certificacion.tasks.UbicarseEn.performAs(UbicarseEn.java:31)
+	at com.prueba.certificacion.tasks.UbicarseEn$$EnhancerByCGLIB$$6c2e3dc6.CGLIB$performAs$0(&lt;generated&gt;)
+	at com.prueba.certificacion.tasks.UbicarseEn$$EnhancerByCGLIB$$6c2e3dc6$$FastClassByCGLIB$$38c70a84.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:10)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:20)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:361)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:132)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:68)
+	at com.prueba.certificacion.tasks.UbicarseEn$$EnhancerByCGLIB$$6c2e3dc6.performAs(&lt;generated&gt;)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:106)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:90)
+	at com.prueba.certificacion.stepdefinitions.ConsultarTarifasStepDefinition.ingresoAlMenuTarifario(ConsultarTarifasStepDefinition.java:39)
+	at ?.Ingreso al menu tarifario(src/test/resources/features/tarifario.feature:9)
 
 </pre>
 </span>
@@ -122,18 +185,20 @@
   |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
                                                                   
 
-TEST STARTED: Consulta exitosa del saldo promedio mensual por debajo del mínimo de una cuenta Corriente
--------------------------------------------------------------------(:-consultar-tarifas-de-cuentas-de-depósitos;consulta-exitosa-del-saldo-promedio-mensual-por-debajo-del-mínimo-de-una-cuenta-corriente)
-[Test worker] INFO net.serenitybdd.core.Serenity - 
-        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
-  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
- (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
-  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
- (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
-        /_/                                                                
+TEST STARTED: Consulta exitosa del archivo con tarifas para cuentas depositos
+-------------------------------------------------------------------(:-consultar-tarifas-de-cuentas-de-depósitos;consulta-exitosa-del-archivo-con-tarifas-para-cuentas-depositos)
+[Test worker] ERROR net.serenitybdd.core.Serenity - 
+           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
+  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
+ (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
+  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
+ (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
+          \_\                                                            
 
-TEST PASSED: Consulta exitosa del saldo promedio mensual por debajo del mínimo de una cuenta Corriente
-----------------------------------------------------------------------------
+TEST FAILED WITH ERROR: Consulta exitosa del archivo con tarifas para cuentas depositos
+---------------------------------------------------------------------
+[Test worker] ERROR net.serenitybdd.core.Serenity - TEST FAILED AT STEP Perform as: Jurgen
+[Test worker] ERROR net.serenitybdd.core.Serenity - The following error occurred: element click intercepted: Element is not clickable at point (490, 937)
 </pre>
 </span>
 </div>
@@ -145,7 +210,7 @@ TEST PASSED: Consulta exitosa del saldo promedio mensual por debajo del mínimo 
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.3</a> at 19/04/2021 08:59:54 PM</p>
+<a href="http://www.gradle.org">Gradle 6.3</a> at 20/04/2021 12:40:06 PM</p>
 </div>
 </div>
 </body>

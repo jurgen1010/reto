@@ -1,5 +1,7 @@
 package com.prueba.certificacion.stepdefinitions;
 
+import com.prueba.certificacion.exceptions.TarifasCuentasDepositosException;
+import com.prueba.certificacion.questions.TarifasCuentaDepositos;
 import com.prueba.certificacion.tasks.BuscarElDocumento;
 import com.prueba.certificacion.tasks.UbicarseEn;
 import com.prueba.certificacion.utils.drivers.MiChromeDriver;
@@ -7,12 +9,16 @@ import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;
+import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import java.util.List;
 
+import static com.prueba.certificacion.exceptions.TarifasCuentasDepositosException.LA_VENTANA_CON_LA_INFORMACION_DETARIFAS_NO_SE_VISUALIZA;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class ConsultarTarifasStepDefinition {
@@ -39,8 +45,8 @@ public class ConsultarTarifasStepDefinition {
         theActorInTheSpotlight().attemptsTo(BuscarElDocumento.tarifasDeCuentasDepositos());
     }
 
-    @Entonces("^Visualizo que la tarifa a mi cuenta es la correcta$")
-    public void visualizoQueLaTarifaAMiCuentaEsLaCorrecta(List<String> datos)  {
-
+    @Entonces("^Visualizo en una nueva ventana el archivo de tarifas$")
+    public void visualizoEnUnaNuevaVentanaElArchivoDeTarifas()  {
+        theActorInTheSpotlight().should(seeThat(TarifasCuentaDepositos.enPantalla()).orComplainWith(TarifasCuentasDepositosException.class,LA_VENTANA_CON_LA_INFORMACION_DETARIFAS_NO_SE_VISUALIZA));
     }
 }

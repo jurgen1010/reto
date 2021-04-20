@@ -14,15 +14,15 @@ public class MiChromeDriver {
         System.setProperty("webdriver.chrome.driver",
                 "src/test/resources/drivers/chromedriver_90.exe");
 
-        /*String rutaDesrgaArchivoDefecto = "${user.dir}\\src\\test\\resources\\archivos";
+        String rutaDesrgaArchivoDefecto = "${user.dir}\\src\\test\\resources\\archivos";
         HashMap<String, Object> chromePreferencias = new HashMap<String, Object>();
         chromePreferencias.put("download.default_directory", rutaDesrgaArchivoDefecto);
 
-         */
+
         ChromeOptions chromeOptions = new ChromeOptions();
-        //chromeOptions.setExperimentalOption("prefs",chromePreferencias);
+        chromeOptions.setExperimentalOption("prefs",chromePreferencias);
         chromeOptions.addArguments("--start-maximized");
-        //chromeOptions.addArguments("--disable-print-preview");
+        chromeOptions.addArguments("--disable-print-preview");
         driver=new ChromeDriver(chromeOptions);
         return new MiChromeDriver();
     }

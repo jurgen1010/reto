@@ -4,13 +4,10 @@ Característica: : Consultar tarifas de Cuentas de Depósitos
   necesito consultar las diferentes tarifas existentes para las Cuentas de Depositos a traves de la pagina web,
   para conocer los diferentes cargos que se puedan aplicar, segun el tipo de cuenta Depositos que maneje.
 
-  Esquema del escenario: Consulta exitosa del saldo promedio mensual por debajo del mínimo de una cuenta Corriente
+  Escenario: Consulta exitosa del archivo con tarifas para cuentas depositos
     Dado Yo como usuario del portal web de banistmo
     Cuando Ingreso al menu tarifario
     Y Consulto el archivo de tarifas de Cuentas de Depositos
-    Entonces Visualizo que la tarifa a mi cuenta es la correcta
-    |<tarifaPromedioMensual>|
+    Entonces Visualizo en una nueva ventana el archivo de tarifas
 
-    Ejemplos:
-      | tarifaPromedioMensual |
-      | USD 10.00             |
+
