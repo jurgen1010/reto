@@ -11,6 +11,7 @@ import static com.prueba.certificacion.userinterfaces.ConsultarTarifas.TARIFAS_D
 public class BuscarElDocumento implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
+
        actor.attemptsTo(Scroll.to(TARIFAS_DE_CUENTAS_DE_DEPOSITOS_LABEL));
        actor.attemptsTo(DescargarArchivo.tarifasCuentasDepositos());
     }
